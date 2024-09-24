@@ -1,25 +1,15 @@
 # Car Dheko - Used Car Price Prediction
 
-## Keywords From This Project
-1.	Data Cleaning and Preprocessing
-2.	Exploratory Data Analysis
-3.	Machine Learning Model Development
-4.	Price Prediction Techniques
-5.	Model Evaluation and Optimization
-6.	Model Deployment
-7.	Streamlit Application Development
-8.	Documentation and Reporting
+## Problem Statement
+
+### Objective
+The object aim is to enhance the CarDheko customer experience and streamline the pricing process by leveraging machine learning. Requirement includes creation an accurate and user-friendly streamlit tool that predicts the prices of used cars based on various features. This tool should be deployed as an interactive web application for both customers and sales representatives to use seamlessly.
+
+### Project Scope
+We have historical data on used car prices from CarDekho, including various features such as make, model, year, fuel type, transmission type, and other relevant attributes from different cities. Your task as a data scientist is to develop a machine learning model that can accurately predict the prices of used cars based on these features. The model should be integrated into a Streamlit-based web application to allow users to input car details and receive an estimated price instantly.
 
 ## Domain
 Automotive Industry
-
-## Problem Statement:
-
-### Objective:
-The object aim is to enhance the CarDheko customer experience and streamline the pricing process by leveraging machine learning. Requirement includes creation an accurate and user-friendly streamlit tool that predicts the prices of used cars based on various features. This tool should be deployed as an interactive web application for both customers and sales representatives to use seamlessly.
-
-### Project Scope:
-We have historical data on used car prices from CarDekho, including various features such as make, model, year, fuel type, transmission type, and other relevant attributes from different cities. Your task as a data scientist is to develop a machine learning model that can accurately predict the prices of used cars based on these features. The model should be integrated into a Streamlit-based web application to allow users to input car details and receive an estimated price instantly.
 
 ## Tools Used
 
@@ -31,10 +21,19 @@ We have historical data on used car prices from CarDekho, including various feat
 - Scipy - Optimization
 - Streamlit - Visualization 
 
+## Process flow
+1.	Data Cleaning and Preprocessing
+2.	Exploratory Data Analysis
+3.	Machine Learning Model Development
+4.	Price Prediction Techniques
+5.	Model Evaluation and Optimization
+6.	Model Deployment
+7.	Streamlit Application Development
+8.	Documentation and Reporting
 
-## Approach:
+## Approach
 
-### 1)	 Data Processing
+### 1)	 Data Cleaning and Preprocessing
 
 #### a)	Import and concatenate:
 i)	Import all city’s dataset which is in unstructured format.
@@ -69,7 +68,7 @@ i)	Used techniques like correlation analysis, feature importance from models, an
 #### a)	Train-Test Split: Split the dataset into training and testing sets to evaluate model performance.
 i)	Common split ratios are 70-30 or 80-20, utilized 80-20.
 #### b)	Model Selection: Choose appropriate machine learning algorithms for price prediction.
-i)	Used Linear Regression, Decision Trees, Random Forests, and XG Boosting Machines
+i)	Used Linear Regression, Decision Trees, Random Forests, AdaBoost and XG Boosting Machines
 #### c)	Model Training: Train the selected models on the training dataset.
 i)	Used cross-validation techniques to ensure robust performance.
 #### d)	Hyperparameter Tuning: Optimize model parameters to improve performance.
