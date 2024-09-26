@@ -13,6 +13,7 @@ df_cars_initial = pd.read_excel("modified_dataset/all_cities_cars_with_url.xlsx"
 df_cars_with_url_initial = df_cars_initial[['oem', 'url_model']]
 df_cars_url = df_cars_with_url_initial.drop_duplicates()
 
+# Remove duplicates from url_model columns
 df_cars = df_cars_initial.drop('url_model', axis=1)
 
 # Define categorical columns and extract unique values
@@ -31,23 +32,25 @@ def preprocess_input(data, encoded_columns, categorical_columns):
 
     # Reindex the columns to ensure the same columns as training data
     data_encoded = data_encoded.reindex(columns=encoded_columns, fill_value=0)
-
     return data_encoded
 
 
 def predict_price(input_data):
-    # Preprocess the input data
+    # Preprocessing the input data
     processed_input = preprocess_input(input_data, encoded_columns, categorical_columns)
 
     # Make prediction
     prediction = xgb_model.predict(processed_input)
-
     return prediction[0]
 
 
 def format_inr(number):
-    s, *d = str(number).partition(".")
+    s, *d = str(number).partition(".")  # Splits the number into the part before and after the decimal
+
+    # Format the integer part with commas as per INR standards
     r = ",".join([s[x-2:x] for x in range(-3, -len(s), -2)][::-1] + [s[-3:]])
+
+    # Join formatted integer part with decimal, if any
     return "".join([r] + d)
 
 
@@ -74,7 +77,6 @@ def main():
     insurance_validity = st.sidebar.selectbox('Insurance Validity', unique_values['Insurance Validity'])
     location = st.sidebar.selectbox('Location', unique_values['Location'])
     rto_grouped = st.sidebar.selectbox('RTO Grouped', unique_values['RTO_grouped'])
-
     modelYear = st.sidebar.number_input('Model Year', min_value=2000, max_value=2024)
     turbo_charger = st.sidebar.checkbox('Turbo Charger')
     km = st.sidebar.number_input('Kms driven', min_value=0)
@@ -95,7 +97,7 @@ def main():
         'Displacement': [engineCC],
         'Turbo Charger': [turbo_charger]
     })
-
+ 
     if st.sidebar.button('Predict'):
         prediction = predict_price(input_data)
         formatted_price = format_inr(prediction)
@@ -103,7 +105,7 @@ def main():
         st.markdown(f'''
             <div style="padding: 10px; border: 2px solid #4CAF50; border-radius: 10px; background-color: #f9f9f9;">
                 <h2 style="color: #4CAF50;">The predicted price for the car is:</h2>
-                <h1 style="color: #4CAF50;">₹ {formatted_price}</h1>
+                <h1 style="color: #4CAF50; text-align: center;">₹ {formatted_price}</h1>
             </div>
         ''', unsafe_allow_html=True)
 
