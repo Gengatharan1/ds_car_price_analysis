@@ -103,7 +103,7 @@ Best models are Random Forest and XGBoost
 ## Checking to see for the Lasso and Ridge Regularization
 ![CHEESE!](LassoRidge.png)
 
-## Retrained Models with Best Parameters after hypertune
+## Retrained Models with Best Parameters using hypertuning
 
 ![CHEESE!](XGBoost_Retrained.png)
 ![CHEESE!](RandomForest_Retrained.png)
@@ -112,10 +112,6 @@ Best models are Random Forest and XGBoost
 
 ## Link to the notebook file
 You can view the full notebook with detailed analysis and code [here](./cardekho_project.ipynb).
-
-## StreamLit Output 
-![CHEESE!](Page1StremLit.png)
-![CHEESE!](Page2StreamLit.png)
 
 
 ## Results: 
