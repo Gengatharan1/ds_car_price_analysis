@@ -31,7 +31,6 @@ def preprocess_input(data, encoded_columns, categorical_columns):
 
     # Reindex the columns to ensure the same columns as training data
     data_encoded = data_encoded.reindex(columns=encoded_columns, fill_value=0)
-
     return data_encoded
 
 

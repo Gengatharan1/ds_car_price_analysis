@@ -113,6 +113,9 @@ Best models are Random Forest and XGBoost
 ## Link to the notebook file
 You can view the full notebook with detailed analysis and code [here](./cardekho_project.ipynb).
 
+## StreamLit Output 
+![CHEESE!](Page1StreamLit.png)
+![CHEESE!](Page2StreamLit.png)
 
 ## Results: 
 1.	A functional and accurate machine learning model for predicting used car prices.
