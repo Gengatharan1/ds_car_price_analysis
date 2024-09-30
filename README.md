@@ -98,15 +98,15 @@ i)	Provide clear instructions and error handling.
 ## Evaluation Metrics
 
 Best models are Random Forest and XGBoost
-![CHEESE!](EvaluationMetrics.png)
+![CHEESE!](img/EvaluationMetrics.png)
 
 ## Checking to see for the Lasso and Ridge Regularization
-![CHEESE!](LassoRidge.png)
+![CHEESE!](img/LassoRidge.png)
 
 ## Retrained Models with Best Parameters using hypertuning
 
-![CHEESE!](XGBoost_Retrained.png)
-![CHEESE!](RandomForest_Retrained.png)
+![CHEESE!](img/XGBoost_Retrained.png)
+![CHEESE!](img/RandomForest_Retrained.png)
 
 ## Best Model is XGBoost with a train R2 score of 0.989 and a test R2 score of 0.956
 
@@ -114,8 +114,8 @@ Best models are Random Forest and XGBoost
 You can view the full notebook with detailed analysis and code [here](./cardekho_project.ipynb).
 
 ## StreamLit Output 
-![CHEESE!](Page1StreamLit.png)
-![CHEESE!](Page2StreamLit.png)
+![CHEESE!](img/Page1StreamLit.png)
+![CHEESE!](img/Page2StreamLit.png)
 
 ## Results: 
 1.	A functional and accurate machine learning model for predicting used car prices.
