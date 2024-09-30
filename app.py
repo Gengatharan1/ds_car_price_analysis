@@ -4,8 +4,8 @@ from xgboost import XGBRegressor
 import streamlit as st
 
 # Loading the saved model and preprocessing information
-xgb_model = joblib.load('xgboost_model.pkl')
-encoded_columns = joblib.load('encoded_columns.pkl')
+xgb_model = joblib.load('model/xgboost_model.pkl')
+encoded_columns = joblib.load('model/encoded_columns.pkl')
 
 # Loading the dataset to get unique values for dropdown options
 df_cars_initial = pd.read_excel("modified_dataset/all_cities_cars_with_url.xlsx")
